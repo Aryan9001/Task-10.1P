@@ -1,0 +1,19 @@
+/* Hero.css */
+
+/* Center the image horizontally and vertically */
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #333;
+  }
+  
+  /* Apply styles to the image */
+  .hero {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  

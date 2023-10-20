@@ -1,0 +1,14 @@
+/* featured_tutorials.css */
+
+/* Custom hover effect */
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Align rating and author information */
+  .tutorial-card .extra {
+    display: flex;
+    align-items: center;
+  }
+  

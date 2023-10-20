@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscribe to Deakin's Newsletter</title>
+</head>
+<body>
+    <h1>Welcome to Deakin's Newsletter</h1>
+    <p>Subscribe now to stay updated!</p>
+
+    <form action="/subscribe" method="POST">
+        <input type="text" name="firstName" placeholder="First Name">
+        <input type="text" name="lastName" placeholder="Last Name">
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Subscribe</button>
+    </form>
+
+    <div id="message"></div>
+
+    <script>
+        const form = document.querySelector('form');
+        const message = document.getElementById('message');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const response = await fetch('/subscribe', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.text();
+            message.textContent = result;
+            form.reset();
+        });
+    </script>
+</body>
+</html>
